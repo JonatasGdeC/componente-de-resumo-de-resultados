@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root{
+    --fonte-texto: 'Hanken Grotesk', sans-serif;
+
+    --cor-texto-primaria: #ffffff;
+    --cor-texto-secundaria: #CAC9FF;
+    --cor-texto-terciaria: #303B59;
+
+
+    --backgroung-body: #ECF2FF;
+    --background-conteudo: #ffffff;
+    --background-score: linear-gradient(180deg, #7755FF 0%, #6943FF 0.01%, #2F2CE9 100%);
+    --background-circulo: linear-gradient(180deg, #4D21C9 0%, rgba(37, 33, 201, 0) 100%, rgba(37, 33, 201, 0) 100%);
+
+}
+
+body{
+    background: var(--backgroung-body);
+}
+
+main{
+    height: 100vh;
+    font-family: var(--fonte-texto);
+}
+
+.conteudo{
+    display: flex;
+    width: 736px;
+    height: 512px;
+    background: var(--background-conteudo);
+    border-radius: 32px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.conteudo__score{
+    width: 368px;
+    background: var(--background-score);
+    border-radius: 32px;
+}
+
+.conteudo__score__titulo{
+    color: var(--cor-texto-secundaria);
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 38px;
+}
+
+.conteudo__score__circulo{
+    width: 200px;
+    height: 200px;
+    background: var(--background-circulo);
+    border-radius: 100%;
+    text-align: center;
+    margin: 35px 84px 28px 84px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.conteudo__score__circulo__resultado{
+    color: var(--cor-texto-primaria);
+    font-weight: 700;
+    font-size: 72px;
+    padding-top: 55px;
+    
+}
+
+.conteudo__score__circulo__de{
+    color: var(--cor-texto-secundaria);
+    font-weight: 700;
+    font-size: 18px;
+
+}
+
+.conteudo__score__mensagem{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.conteudo__score__mensagem__titulo{
+    color: var(--cor-texto-primaria);
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.conteudo__score__mensagem__texto{
+    color: var(--cor-texto-secundaria);
+    font-weight: 500;
+    font-size: 18px;
+    padding: 14px 54px 55px 54px ;
+}
+
+.conteudo__summary{
+    width: 386px;
+}
+
+.conteudo__summary__titulo{
+    color: var(--cor-texto-terciaria);
+    font-weight: 700;
+    font-size: 24px;
+    padding: 38px 0 28px 40px;
+}
+
+.conteudo__summary__pontuacao{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0px 40px;
+}
+
+.conteudo__summary__pontuacao__abas{
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.conteudo__summary__pontuacao__abas:nth-child(1){
+    background: rgba(255, 85, 85, 0.05);
+}
+
+.conteudo__summary__pontuacao__abas:nth-child(2){
+    background: rgba(255, 178, 30, 0.05);
+}
+
+.conteudo__summary__pontuacao__abas:nth-child(3){
+    background: rgba(0, 187, 143, 0.05);
+}
+
+.conteudo__summary__pontuacao__abas:nth-child(4){
+    background: rgba(17, 37, 214, 0.05);
+}
+
+.conteudo__summary__pontuacao__abas__icones{
+    padding: 0 12px 0 16px;
+}
+
+.conteudo__summary__pontuacao__abas__titulo{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#reaction{
+    color: rgba(255, 85, 85, 1);
+}
+
+#memory{
+    color: rgba(255, 178, 30, 1);
+}
+
+#verbal{
+    color: rgba(0, 187, 143, 1);
+}
+
+#visual{
+    color: rgba(17, 37, 214, 1);
+}
+
+.conteudo__summary__pontuacao__abas__resultados{
+    display: flex;
+    gap: 8px;
+    color: var(--cor-texto-secundaria);
+    font-weight: 700;
+    font-size: 18px;
+    padding-right: 16px;
+}
+
+.conteudo__summary__pontuacao__abas__resultados__seus{
+    color: var(--cor-texto-terciaria);
+}
+
+.conteudo__summary__botao{
+    color: var(--cor-texto-primaria);
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 126px;
+    background: var(--cor-texto-terciaria);
+    border: transparent;
+    display: flex;
+    align-items: center;
+    padding: 17px 107px 16px 106px;
+    margin: 41px 40px 46px 40px;
+    cursor: pointer;
+}
+
+.conteudo__summary__botao:hover{
+    background: linear-gradient(180deg, #7755FF 0%, #6943FF 0.01%, #2F2CE9 100%);
+    
+}
+
+@media(max-width: 750px){
+
+    .conteudo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        height: auto;
+        padding-top: 75%;
+    }
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+  
